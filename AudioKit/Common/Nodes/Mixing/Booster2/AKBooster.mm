@@ -12,10 +12,10 @@
 // In this case a destructor is not needed, since the DSP object doesn't do any of
 // its own heap based allocation.
 
-extern "C" void* createBoosterDSP(int nChannels, double sampleRate) {
+extern "C" CDsp createBoosterDSP(int nChannels, double sampleRate) {
     AKBoosterDSP* dsp = new AKBoosterDSP();
     dsp->init(nChannels, sampleRate);
-    return dsp;
+    return (CDsp)dsp;
 }
 
 

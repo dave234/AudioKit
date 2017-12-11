@@ -35,6 +35,7 @@
 		558D80801F4D2A3D001E7BC1 /* TPCircularBuffer+AudioBufferList.h in Headers */ = {isa = PBXBuildFile; fileRef = 558D807C1F4D2A3D001E7BC1 /* TPCircularBuffer+AudioBufferList.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		558D80811F4D2A3D001E7BC1 /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 558D807D1F4D2A3D001E7BC1 /* TPCircularBuffer.c */; };
 		558D80821F4D2A3D001E7BC1 /* TPCircularBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 558D807E1F4D2A3D001E7BC1 /* TPCircularBuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55D42B601FDE3894006495B8 /* CDsp.h in Headers */ = {isa = PBXBuildFile; fileRef = 55D42B5E1FDE3894006495B8 /* CDsp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		55E25D611F4F3B6800F5AF08 /* TPCircularBuffer+Unit.c in Sources */ = {isa = PBXBuildFile; fileRef = 55E25D5F1F4F3B6800F5AF08 /* TPCircularBuffer+Unit.c */; };
 		55E25D621F4F3B6800F5AF08 /* TPCircularBuffer+Unit.h in Headers */ = {isa = PBXBuildFile; fileRef = 55E25D601F4F3B6800F5AF08 /* TPCircularBuffer+Unit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		55E4F4FD1F5778450088018A /* Skeleton.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 55E4F4FA1F5778450088018A /* Skeleton.aupreset */; };
@@ -42,6 +43,7 @@
 		55E4F5171F578C230088018A /* AKPresetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E4F5151F578C230088018A /* AKPresetManager.m */; };
 		55E4F5291F57DAC30088018A /* AKSamplerMetronome.h in Headers */ = {isa = PBXBuildFile; fileRef = 55E4F5271F57DAC30088018A /* AKSamplerMetronome.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		55E4F52A1F57DAC30088018A /* AKSamplerMetronome.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E4F5281F57DAC30088018A /* AKSamplerMetronome.m */; };
+		55EC15D81FDE59AB00DC5DAB /* CDsp.mm in Sources */ = {isa = PBXBuildFile; fileRef = 55D42B5F1FDE3894006495B8 /* CDsp.mm */; };
 		A1FE77A11F64549E00A2E41C /* AKAudioEffect.h in Headers */ = {isa = PBXBuildFile; fileRef = A1FE779D1F64549E00A2E41C /* AKAudioEffect.h */; };
 		A1FE77A21F64549E00A2E41C /* AKAudioEffect.mm in Sources */ = {isa = PBXBuildFile; fileRef = A1FE779E1F64549E00A2E41C /* AKAudioEffect.mm */; };
 		A1FE77AC1F6454E100A2E41C /* AKBooster2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FE77A91F6454E100A2E41C /* AKBooster2.swift */; };
@@ -980,6 +982,8 @@
 		558D807C1F4D2A3D001E7BC1 /* TPCircularBuffer+AudioBufferList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TPCircularBuffer+AudioBufferList.h"; sourceTree = "<group>"; };
 		558D807D1F4D2A3D001E7BC1 /* TPCircularBuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TPCircularBuffer.c; sourceTree = "<group>"; };
 		558D807E1F4D2A3D001E7BC1 /* TPCircularBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPCircularBuffer.h; sourceTree = "<group>"; };
+		55D42B5E1FDE3894006495B8 /* CDsp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDsp.h; sourceTree = "<group>"; };
+		55D42B5F1FDE3894006495B8 /* CDsp.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CDsp.mm; sourceTree = "<group>"; };
 		55E25D5F1F4F3B6800F5AF08 /* TPCircularBuffer+Unit.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "TPCircularBuffer+Unit.c"; sourceTree = "<group>"; };
 		55E25D601F4F3B6800F5AF08 /* TPCircularBuffer+Unit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TPCircularBuffer+Unit.h"; sourceTree = "<group>"; };
 		55E4F4FA1F5778450088018A /* Skeleton.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Skeleton.aupreset; sourceTree = "<group>"; };
@@ -4164,6 +4168,8 @@
 		C4AC0B551FC9460300EDA024 /* AK4 */ = {
 			isa = PBXGroup;
 			children = (
+				55D42B5E1FDE3894006495B8 /* CDsp.h */,
+				55D42B5F1FDE3894006495B8 /* CDsp.mm */,
 				C4AC0B561FC9460300EDA024 /* AKDSPBase.hpp */,
 				C4AC0B571FC9460300EDA024 /* AKAudioUnitBase.h */,
 				C4AC0B581FC9460300EDA024 /* AKAudioUnitBase.mm */,
@@ -4376,6 +4382,7 @@
 				C45669541D448D7E00D26565 /* AKFlatFrequencyResponseReverbDSPKernel.hpp in Headers */,
 				C4146D921F3E47F9001AAE11 /* Equalisator.h in Headers */,
 				4871D4591DD912AA0046A768 /* Envelope.h in Headers */,
+				55D42B601FDE3894006495B8 /* CDsp.h in Headers */,
 				C4A107451E6967850018848C /* AKBrownianNoiseAudioUnit.h in Headers */,
 				C4AC0B6B1FC9460500EDA024 /* ParameterRamper.hpp in Headers */,
 				C45669B01D448D7E00D26565 /* AKPannerDSPKernel.hpp in Headers */,
@@ -4639,6 +4646,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55EC15D81FDE59AB00DC5DAB /* CDsp.mm in Sources */,
 				C4F8CA111DCA9256001F38F2 /* prop.c in Sources */,
 				C45666F61D448D7E00D26565 /* drip.c in Sources */,
 				C4F8C9CC1DCA9255001F38F2 /* butbp.c in Sources */,

@@ -12,6 +12,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import <AudioToolbox/AudioToolbox.h>
 #import "AKDSPBase.hpp"
+#import "CDsp.h"
 
 @interface AKAudioUnitBase : AUAudioUnit
 
@@ -22,7 +23,7 @@
  is. I'm not sure the standard way to deal with this.
  */
 
-- (void*)initDSPWithSampleRate:(double) sampleRate channelCount:(AVAudioChannelCount) count;
+- (CDsp)initDSPWithSampleRate:(double) sampleRate channelCount:(AVAudioChannelCount) count;
 
 /**
  Sets the parameter tree. The important piece here is that setting the parameter tree
@@ -48,7 +49,7 @@
 @property AUAudioUnitBus *outputBus;
 @property AUAudioUnitBusArray *inputBusArray;
 @property AUAudioUnitBusArray *outputBusArray;
-
+@property (readonly) CDsp cdsp;
 @end
 
 

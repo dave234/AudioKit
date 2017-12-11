@@ -40,8 +40,8 @@
  DSP is invalid.
  */
 
-- (void*)initDSPWithSampleRate:(double) sampleRate channelCount:(AVAudioChannelCount) count {
-    return (void*)(_kernel = NULL);
+- (CDsp)initDSPWithSampleRate:(double) sampleRate channelCount:(AVAudioChannelCount) count {
+    return (CDsp)(_kernel = NULL);
 }
 
 /**
@@ -217,6 +217,11 @@
 - (BOOL)canProcessInPlace {
     return NO;   // OK THIS IS DIFFERENT FROM APPLE EXAMPLE CODE
 }
+
+-(CDsp)cdsp {
+    return reinterpret_cast<CDsp>(_kernel);
+}
+
 
 // ----- BEGIN UNMODIFIED COPY FROM APPLE CODE -----
 

@@ -31,7 +31,7 @@ public class AKBooster2AudioUnit: AKAudioUnitBase {
     }
 
     public override func initDSP(withSampleRate sampleRate: Double,
-                                 channelCount count: AVAudioChannelCount) -> UnsafeMutableRawPointer! {
+                                 channelCount count: AVAudioChannelCount) -> CDsp {
         return createBoosterDSP(Int32(count), sampleRate)
     }
 

@@ -9,6 +9,8 @@
 #pragma once
 
 #import <Foundation/Foundation.h>
+#import "CDsp.h"
+
 
 typedef NS_ENUM(int64_t, AKBoosterParameter) {
     AKBoosterParameterLeftGain,
@@ -18,7 +20,7 @@ typedef NS_ENUM(int64_t, AKBoosterParameter) {
 
 #ifndef __cplusplus
 
-void* createBoosterDSP(int nChannels, double sampleRate);
+CDsp createBoosterDSP(int nChannels, double sampleRate);
 
 #else
 

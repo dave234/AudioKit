@@ -16,6 +16,11 @@ open class AKBooster2: AKNode, AKToggleable, AKComponent, AKInput {
     // MARK: - Properties
 
     private var internalAU: AKAudioUnitType?
+
+    public var dsp: CDsp? {
+        return internalAU?.cdsp
+    }
+
     private var token: AUParameterObserverToken?
 
     fileprivate var leftGainParameter: AUParameter?

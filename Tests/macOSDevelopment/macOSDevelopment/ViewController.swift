@@ -23,7 +23,7 @@ class ViewController: NSViewController {
 
     // Define components
     var oscillator = AKOscillator()
-    var booster = AKBooster()
+    var booster = AKBooster2()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,15 +44,26 @@ class ViewController: NSViewController {
     }
 
     @IBAction func button1(_ sender: NSButton) {
-        if oscillator.isPlaying {
-            oscillator.stop()
-            button1.stringValue = "Start"
-            updateText("Stopped")
-        } else {
-            oscillator.start()
-            button1.stringValue = "Stop"
-            updateText("Playing \(Int(oscillator.frequency))Hz")
+
+        oscillator.play()
+
+        guard let dsp = booster.dsp else {
+            return
         }
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            dsp.setParameter(address: 0, value: 1, immediate: false)
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            dsp.setParameter(address: 1, value: 1, immediate: false)
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            dsp.setParameter(address: 0, value: 0.2, immediate: false)
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+            dsp.setParameter(address: 1, value: 0.2, immediate: false)
+        }
+
     }
     @IBAction func slid1(_ sender: NSSlider) {
         booster.gain = Double(slider1.floatValue)
