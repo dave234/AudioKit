@@ -24,6 +24,7 @@ class ViewController: NSViewController {
     // Define components
     var oscillator = AKOscillator()
     var booster = AKBooster2()
+    var automator: AutomatePOC!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,12 +42,18 @@ class ViewController: NSViewController {
         AudioKit.start()
         sender.isEnabled = false
 
+        automator = AutomatePOC.init(node: booster.avAudioNode, andDSP: booster.dsp!)
+
     }
 
     @IBAction func button1(_ sender: NSButton) {
 
         oscillator.play()
+        automator?.start()
+        return;
 
+
+        
         guard let dsp = booster.dsp else {
             return
         }
@@ -65,6 +72,8 @@ class ViewController: NSViewController {
         }
 
     }
+
+
     @IBAction func slid1(_ sender: NSSlider) {
         booster.gain = Double(slider1.floatValue)
         updateText("booster gain = \(booster.gain)")
