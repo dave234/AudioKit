@@ -84,6 +84,10 @@
 		551AAC611F620A7F00A14C0D /* AKClipRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551AAC2F1F61F59700A14C0D /* AKClipRecorder.swift */; };
 		551AAC621F620A8D00A14C0D /* AKTiming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551AAC2A1F61F48300A14C0D /* AKTiming.swift */; };
 		552FBD431F3F6A5600C02C08 /* AKConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552FBD421F3F6A5600C02C08 /* AKConnection.swift */; };
+		556414C021B8D5DD00E433F7 /* AudioUnitBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 556414BE21B8D5DD00E433F7 /* AudioUnitBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		556414C121B8D5DD00E433F7 /* AudioUnitBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 556414BF21B8D5DD00E433F7 /* AudioUnitBase.m */; };
+		556414C421B8E18B00E433F7 /* AudioUnitDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = 556414C221B8E18B00E433F7 /* AudioUnitDescription.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		556414C521B8E18B00E433F7 /* AudioUnitDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 556414C321B8E18B00E433F7 /* AudioUnitDescription.m */; };
 		558FC73F21ABA7C7009C05B0 /* BufferedAudioUnit.h in Headers */ = {isa = PBXBuildFile; fileRef = 558FC73D21ABA7C6009C05B0 /* BufferedAudioUnit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		558FC74021ABA7C7009C05B0 /* BufferedAudioUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 558FC73E21ABA7C7009C05B0 /* BufferedAudioUnit.m */; };
 		558FC78721AD0CF6009C05B0 /* AudioEngineUnit.h in Headers */ = {isa = PBXBuildFile; fileRef = 558FC78521AD0CF5009C05B0 /* AudioEngineUnit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -1251,6 +1255,10 @@
 		551AAC2E1F61F59700A14C0D /* AKClipMerger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKClipMerger.swift; sourceTree = "<group>"; };
 		551AAC2F1F61F59700A14C0D /* AKClipRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKClipRecorder.swift; sourceTree = "<group>"; };
 		552FBD421F3F6A5600C02C08 /* AKConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKConnection.swift; sourceTree = "<group>"; };
+		556414BE21B8D5DD00E433F7 /* AudioUnitBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioUnitBase.h; sourceTree = "<group>"; };
+		556414BF21B8D5DD00E433F7 /* AudioUnitBase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioUnitBase.m; sourceTree = "<group>"; };
+		556414C221B8E18B00E433F7 /* AudioUnitDescription.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioUnitDescription.h; sourceTree = "<group>"; };
+		556414C321B8E18B00E433F7 /* AudioUnitDescription.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioUnitDescription.m; sourceTree = "<group>"; };
 		558FC73D21ABA7C6009C05B0 /* BufferedAudioUnit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BufferedAudioUnit.h; sourceTree = "<group>"; };
 		558FC73E21ABA7C7009C05B0 /* BufferedAudioUnit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BufferedAudioUnit.m; sourceTree = "<group>"; };
 		558FC78521AD0CF5009C05B0 /* AudioEngineUnit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioEngineUnit.h; sourceTree = "<group>"; };
@@ -2658,6 +2666,8 @@
 		C40C41221C40E344009D870B /* CoreAudio */ = {
 			isa = PBXGroup;
 			children = (
+				556414BE21B8D5DD00E433F7 /* AudioUnitBase.h */,
+				556414BF21B8D5DD00E433F7 /* AudioUnitBase.m */,
 				558FC78521AD0CF5009C05B0 /* AudioEngineUnit.h */,
 				558FC78621AD0CF5009C05B0 /* AudioEngineUnit.m */,
 				558FC73D21ABA7C6009C05B0 /* BufferedAudioUnit.h */,
@@ -2672,6 +2682,8 @@
 				EAF71D7B202489E80018946B /* AKDSPKernel.mm */,
 				C48DB7921CD5373000D1EC13 /* CheckError.swift */,
 				C4FF7CAF1D9F7F0B001BB82C /* AudioUnit+Helpers.swift */,
+				556414C221B8E18B00E433F7 /* AudioUnitDescription.h */,
+				556414C321B8E18B00E433F7 /* AudioUnitDescription.m */,
 			);
 			path = CoreAudio;
 			sourceTree = "<group>";
@@ -5345,6 +5357,7 @@
 				C49B14F7204A06B8009C7C8E /* fwavblnk_raw.h in Headers */,
 				C49B1549204A06B8009C7C8E /* JetTable.h in Headers */,
 				55B95B2F1FEDC07E00C76AF5 /* AKInterop.h in Headers */,
+				556414C021B8D5DD00E433F7 /* AudioUnitBase.h in Headers */,
 				C4077B1A2008762600E5923C /* AKLowPassButterworthFilterDSP.hpp in Headers */,
 				C4077B2D2008787D00E5923C /* AKModalResonanceFilterDSP.hpp in Headers */,
 				C49B1572204A06B8009C7C8E /* Guitar.h in Headers */,
@@ -5481,6 +5494,7 @@
 				C49B1585204A06B8009C7C8E /* Clarinet.h in Headers */,
 				C457CBEF213C6D6500AFDEBC /* Envelope.hpp in Headers */,
 				C4AA7BFF1FD2A7C000040720 /* AKTimelineTap.h in Headers */,
+				556414C421B8E18B00E433F7 /* AudioUnitDescription.h in Headers */,
 				3404A7AA20507B1600A2C9E4 /* AKCoreSampler.hpp in Headers */,
 				C49B142B204A06B7009C7C8E /* FFTRealSelect.hpp in Headers */,
 				C49B1399204A06B7009C7C8E /* _kiss_fft_guts.h in Headers */,
@@ -6084,6 +6098,7 @@
 				C4BEAA131DEC3A9800186C50 /* AKAudioUnit.mm in Sources */,
 				34BB6740205AC238000E5450 /* unpack_seek.c in Sources */,
 				C4077B3F2008793700E5923C /* AKToneComplementFilterAudioUnit.swift in Sources */,
+				556414C121B8D5DD00E433F7 /* AudioUnitBase.m in Sources */,
 				C4775841202FD65100159BA7 /* AKDynaRageCompressor.swift in Sources */,
 				B1DAFDDE1FCE0D7300511A43 /* AKConverter.swift in Sources */,
 				C49B1422204A06B7009C7C8E /* pluginobjects.cpp in Sources */,
@@ -6132,6 +6147,7 @@
 				EA03BFDC201DE91600E8BE2C /* AKTubularBellsDSPKernel.mm in Sources */,
 				C49E9CEA201188E0006599B4 /* AKVocalTractAudioUnit.swift in Sources */,
 				C4AC0B431FC944EA00EDA024 /* DSPKernel.mm in Sources */,
+				556414C521B8E18B00E433F7 /* AudioUnitDescription.m in Sources */,
 				34BB6748205AC238000E5450 /* pack_dns.c in Sources */,
 				C49B144A204A06B7009C7C8E /* mode.c in Sources */,
 				C49B1405204A06B7009C7C8E /* dcblock.c in Sources */,

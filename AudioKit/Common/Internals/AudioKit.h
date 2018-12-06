@@ -19,6 +19,7 @@ FOUNDATION_EXPORT double AudioKitVersionNumber;
 //! Project version string for AudioKit.
 FOUNDATION_EXPORT const unsigned char AudioKitVersionString[];
 
+#import "AudioUnitBase.h"
 #import "AKAudioUnitBase.h"
 #import "AKGeneratorAudioUnitBase.h"
 #import "AKSoundpipeDSPBase.hpp"
